@@ -1,4 +1,4 @@
-#Password Generator
+# Password Generator
 
 A simple password generator for creating passwords in our social media and other applications
 
