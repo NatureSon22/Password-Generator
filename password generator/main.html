@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Carme&family=Concert+One&family=Erica+One&family=Fredoka+One&family=Happy+Monkey&family=Karla:wght@800&family=Kodchasan:wght@600&family=Montserrat:wght@300&family=Nerko+One&family=Noto+Sans+JP:wght@900&family=Orbitron:wght@600&family=Play:wght@700&family=Poppins:wght@500;600&family=Roboto:wght@400;500&family=Rubik+Mono+One&family=Rubik+Vinyl&family=Russo+One&family=Signika:wght@700&family=Source+Sans+Pro:wght@600&family=Space+Mono:wght@700&family=Varela+Round&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Carme&family=Concert+One&family=Erica+One&family=Fredoka+One&family=Happy+Monkey&family=Karla:wght@500;800&family=Kodchasan:wght@600&family=Montserrat:wght@300;400&family=Nerko+One&family=Noto+Sans+JP:wght@900&family=Orbitron:wght@600&family=Play:wght@700&family=Poppins:wght@500;600&family=Roboto:wght@400;500&family=Rubik+Mono+One&family=Rubik+Vinyl&family=Russo+One&family=Signika:wght@700&family=Source+Sans+Pro:wght@600&family=Space+Mono:wght@700&family=Varela+Round&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32">
+        <script src="https://kit.fontawesome.com/ce744f4aea.js" crossorigin="anonymous"></script>
+        <title>Password Generator</title>
+    </head>
+
+    <body>
+        <div class="title">
+            <h1>Instantly generate a secure, random password</h1>
+        </div>
+        <div id="password" class="password">
+            <div id="pos">
+                <div class="display-pass">
+                    <input type="text" id="showPassword" placeholder="Password">
+                    <div class="sub-features">
+                        <i class="fa-solid fa-copy" onclick="copy()" title="Copy"></i>
+                        <i class="fa-solid fa-arrow-rotate-right" onclick="reset()" title="Reset"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main_board" class="main-board">
+            <div class="element-board">
+                <h3 class="direction">Customize your password</h3>
+                <hr>
+                <div class="options">
+                    <div class="length">
+                        <p>Length</p>
+                        <div class="slider">
+                            <input id="range" type="range" min="8" max="30" value="30" oninput="rangeValue.innerText = this.value">
+                            <p id="rangeValue">30</p>
+                        </div>
+                    </div>
+                    <div class="boxes">
+                        <div class="element"><input type="checkbox" onclick="isClicked(1)"><p class="choice">Uppercase letter</p></div>
+                        <div class="element"><input type="checkbox" onclick="isClicked(2)"><p class="choice">Lowercase letter</p></div>
+                        <div class="element"><input type="checkbox" onclick="isClicked(3)"><p class="choice">Number</p></div>
+                        <div class="element"><input type="checkbox" onclick="isClicked(4)"><p class="choice">Character</p></div>
+                    </div>
+                </div>
+                <button id="generate" type="button" onclick="generatePass()">GENERATE</button>
+            </div>
+        </div>    
+        <script src="index.js"></script>
+    </body>
+</html>
